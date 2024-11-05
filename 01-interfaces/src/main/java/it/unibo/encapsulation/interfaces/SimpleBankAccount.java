@@ -37,11 +37,13 @@ public class SimpleBankAccount implements BankAccount {
     }
 
     public void withdraw(final int id, final double amount) {
-        /*
-         * Incrementa il numero di transazioni e rimuove amount al totale del
-         * conto. Note: - Il conto puo' andare in rosso (ammontare negativo) -
-         * Il prelievo va a buon fine solo se l'id utente corrisponde
-         */
+        if (this.id == id) {
+            this.balance -= amount;
+            this.transactions += 1;
+        }
+        else {
+            System.err.println("Permission denied. Incorrect id!");
+        }
     }
 
     public void depositFromATM(final int id, final double amount) {
