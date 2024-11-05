@@ -49,6 +49,7 @@ public class Exam {
         return "Exam ["
             + "id=" + this.id
             + ", max students=" + this.maxStudents
+            + ", registered students=" + this.registeredStudents
             + ", course name=" + this.courseName
             + ", Professor=" + this.professor
             + ", room=" + this.room

@@ -4,20 +4,24 @@ public class Testing {
 
     public static void main(final String[] args) {
 
-        User alex = new Student(145326, "Alex", "Rossi", "hklnoih562/", 2023);
-        User marco = new Student(894712, "Marco", "Bianchi", "ojfoae69*", 2019);
-        User jessica = new Student(125369, "Jessica", "Bracchini", "awewprkxf63%", 2022);
+        Student alex = new Student(145326, "Alex", "Rossi", "hklnoih562/", 2023);
+        Student marco = new Student(894712, "Marco", "Bianchi", "ojfoae69*", 2019);
+        Student jessica = new Student(125369, "Jessica", "Bracchini", "awewprkxf63%", 2022);
 
-        // 2)Creare 2 docenti a piacere
-        User profA = new Professor(892536, "Antonio", "Degli Angeli", "ksoemfo59");
+        Professor profA = new Professor(892536, "Antonio", "Degli Angeli", "ksoemfo59");
+        Professor profB = new Professor(112698, "Cristina", "Manenti", "jeojdth89");
 
-        // 3) Creare due aulee di esame, una con 100 posti una con 80 posti
+        ExamRoom lab1 = new ExamRoom(100, null, true, true);
+        ExamRoom lab2 = new ExamRoom(80, null, false, false);
 
-        // 4) Creare due esami, uno con nMaxStudents=10, l'altro con
-        // nMaxStudents=2
+        Exam algorithms = new Exam(789, 10, "Algoritmi e Strutture dati", profA, lab2);
+        Exam databases = new Exam(456, 2, "Basi di Dati", profB, lab1);
 
-        // 5) Iscrivere tutti e 3 gli studenti agli esami
+        algorithms.registerStudent(jessica);
+        databases.registerStudent(marco);
+        databases.registerStudent(alex);
 
-        // 6) Stampare in stdout la rapresentazione in stringa dei due esami
+        System.out.println(algorithms.toString());
+        System.out.println(databases.toString());
     }
 }
