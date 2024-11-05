@@ -3,6 +3,7 @@ package it.unibo.encapsulation.interfaces;
 public class SimpleBankAccount implements BankAccount {
 
     private static double ATM_TRANSACTION_FEE = 1;
+    private static double MANAGEMENT_FEE = 10.0;
 
     private double balance;
     private int transactions;
@@ -32,7 +33,7 @@ public class SimpleBankAccount implements BankAccount {
             this.transactions += 1;
         }
         else {
-            System.err.println("Permission denied. Incorrect id!");
+            System.err.println("Permission denied. Incorrect ID!");
         }
     }
 
@@ -42,7 +43,7 @@ public class SimpleBankAccount implements BankAccount {
             this.transactions += 1;
         }
         else {
-            System.err.println("Permission denied. Incorrect id!");
+            System.err.println("Permission denied. Incorrect ID!");
         }
     }
 
@@ -55,8 +56,11 @@ public class SimpleBankAccount implements BankAccount {
     }
 
     public void chargeManagementFees(final int id) {
-        /*
-         * Riduce il bilancio del conto di un ammontare pari alle spese di gestione
-         */
+        if (this.id == id) {
+            this.balance -= MANAGEMENT_FEE;
+            this.transactions += 1;
+        } else {
+            System.err.println("Permission denied. Incorrect ID!");
+        }
     }
 }
