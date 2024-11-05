@@ -4,9 +4,12 @@ public class Testing {
 
     public static void main(final String[] args) {
 
-        // 1)Creare 3 studenti a piacere
+        User alex = new Student(145326, "Alex", "Rossi", "hklnoih562/", 2023);
+        User marco = new Student(894712, "Marco", "Bianchi", "ojfoae69*", 2019);
+        User jessica = new Student(125369, "Jessica", "Bracchini", "awewprkxf63%", 2022);
 
         // 2)Creare 2 docenti a piacere
+        User profA = new Professor(892536, "Antonio", "Degli Angeli", "ksoemfo59");
 
         // 3) Creare due aulee di esame, una con 100 posti una con 80 posti
 
