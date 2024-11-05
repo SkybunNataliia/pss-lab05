@@ -47,12 +47,7 @@ public class SimpleBankAccount implements BankAccount {
     }
 
     public void depositFromATM(final int id, final double amount) {
-        /*
-         * Incrementa il numero di transazioni e aggiunge amount al totale del
-         * conto detraendo le spese (costante ATM_TRANSACTION_FEE) relative
-         * all'uso dell'ATM (bancomat) Nota: il deposito va a buon fine solo se
-         * l'id utente corrisponde
-         */
+        this.deposit(id, amount - ATM_TRANSACTION_FEE);
     }
 
     public void withdrawFromATM(final int id, final double amount) {
