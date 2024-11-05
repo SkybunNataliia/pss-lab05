@@ -14,10 +14,10 @@ public class Circle implements Shape {
     }
 
     public double calculateArea() {
-        return Math.PI * radius*radius;
+        return Math.PI * this.radius*this.radius;
     }
 
     public double calculatePerimeter() {
-        return Math.PI * diameter;
+        return Math.PI * this.diameter;
     }
 }
