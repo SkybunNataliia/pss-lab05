@@ -51,13 +51,7 @@ public class SimpleBankAccount implements BankAccount {
     }
 
     public void withdrawFromATM(final int id, final double amount) {
-        /*
-         * Incrementa il numero di transazioni e rimuove amount + le spese
-         * (costante ATM_TRANSACTION_FEE) relative all'uso dell'ATM (bancomat)
-         * al totale del conto. Note: - Il conto puo' andare in rosso (ammontare
-         * negativo) - Il prelievo va a buon fine solo se l'id utente
-         * corrisponde
-         */
+        this.withdraw(id, amount - ATM_TRANSACTION_FEE);
     }
 
     public void chargeManagementFees(final int id) {
