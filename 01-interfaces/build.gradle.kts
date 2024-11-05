@@ -9,7 +9,7 @@ application {
 }
 
 // Task personalizzato per eseguire la classe TestBankAccount
-tasks.register("runBanckAccount", JavaExec) {
+tasks.register("runBankAccount", JavaExec) {
     group = "application"
     mainClass.set("it.unibo.encapsulation.interfaces.TestBankAccount")
     classpath = sourceSets.main.runtimeClasspath
