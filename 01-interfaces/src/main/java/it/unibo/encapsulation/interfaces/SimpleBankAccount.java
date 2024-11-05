@@ -27,11 +27,13 @@ public class SimpleBankAccount implements BankAccount {
     }
 
     public void deposit(final int id, final double amount) {
-        /*
-         * Incrementa il numero di transazioni e aggiunge amount al totale del
-         * conto Nota: il deposito va a buon fine solo se l'id utente
-         * corrisponde
-         */
+        if (this.id == id) {
+            this.balance += amount;
+            this.transactions += 1;
+        }
+        else {
+            System.err.println("Permission denied. Incorrect id!");
+        }
     }
 
     public void withdraw(final int id, final double amount) {
