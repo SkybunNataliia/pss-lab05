@@ -14,17 +14,12 @@ public class SimpleBankAccount implements BankAccount {
         this.balance = balance;
     }
 
-    /*
-     * Si aggiungano selettori per:
-     * - ottenere il numero di transazioni effettuate
-     * - ottenere l'ammontare corrente del conto.
-     */
     public int getid() {
         return this.id;
     }
 
     public double getBalance() {
-        return 0.0;
+        return this.balance;
     }
 
     public int getTransactionsCount() {
