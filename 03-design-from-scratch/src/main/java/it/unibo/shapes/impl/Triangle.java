@@ -22,7 +22,7 @@ public class Triangle implements Polygon {
     }
 
     public double calculateArea() {
-        return 1/2 * (this.base * this.height);
+        return 0.5 * (this.base * this.height);
     }
 
     public double calculatePerimeter() {
