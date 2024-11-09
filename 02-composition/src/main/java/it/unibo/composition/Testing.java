@@ -21,7 +21,7 @@ public class Testing {
         databases.registerStudent(marco);
         databases.registerStudent(alex);
 
-        System.out.println(algorithms.toString());
-        System.out.println(databases.toString());
+        System.out.println(algorithms);
+        System.out.println(databases);
     }
 }
